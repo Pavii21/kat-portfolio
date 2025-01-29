@@ -1,0 +1,75 @@
+.experience-page {
+  display: flex;
+  flex-direction: column;
+  margin-left: 70px;
+  margin-top: 70px;
+  color: white;
+  height: 100vh;
+  padding: 20px;
+}
+.descExp{
+  background-color:rgb(130, 249, 166);
+  padding: 10px;
+}
+.experience-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.image-section {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
+  max-width: 40%;
+}
+
+.timeline-image {
+  width: 70%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.timeline-section {
+  max-width: 60%;
+  width: 100%;
+}
+
+.exp {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 70px;
+}
+
+.date {
+  margin-left: 40px;
+  margin-right: 40px;
+  color: white;
+}
+
+/* .button.workButton {
+  margin-top: 10px;
+  color: white;
+  background-color: #06d6a0;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.button.workButton:hover {
+  background-color: #04c58a;
+} */
+
+.vertical-timeline-element-title, .vertical-timeline-element-subtitle{
+  color: black;
+}
+#description{
+  color: black;
+}

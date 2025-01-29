@@ -1,0 +1,49 @@
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Push text and image to opposite sides */
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 40px;
+    max-width: 1200px;
+    height: 80vh; /* Full viewport height */
+    box-sizing: border-box;
+  }
+  
+  .text {
+    max-width: 50%; /* Take up half the container */
+  }
+  
+  .name {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+    color: #ffffff; /* Dark color for text */
+  }
+  
+  .job {
+    font-size: 1.5rem;
+    margin: 10px 0 0;
+    color: #c9c8c8; /* Slightly lighter color for the job title */
+  }
+
+  .para{
+    text-align: justify;
+    margin-top: 30px;
+    margin-bottom: 0px;
+  }
+  .image {
+    max-width: 50%; /* Take up the other half of the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image img {
+    margin-right: 30px;
+    width: 325px; /* Set fixed width for the circle */
+    height: 325px; /* Set fixed height for the circle */
+    border-radius: 50%; /* Create a perfect circle */
+    object-fit: cover; /* Ensures the image fits well within the circle */
+    object-position: center; /* Center the image content */
+  }

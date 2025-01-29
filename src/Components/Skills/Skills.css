@@ -1,0 +1,27 @@
+.skills{
+    margin-top: 800px;
+    text-align: center;
+}
+.ae{
+    height: auto;
+    width: 75px;
+    margin-right: 20px;
+    margin-top: 50px;
+}
+.pr{
+    height: auto;
+    width: 80px;
+    margin-right: 20px;
+
+
+}
+.ps{
+    height: auto;
+    width: 80px;
+}
+
+.da{
+    height: auto;
+    width: 80px;
+    margin-left: 15px;
+}
