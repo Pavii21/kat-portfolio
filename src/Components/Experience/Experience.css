@@ -1,16 +1,13 @@
 .experience-page {
   display: flex;
   flex-direction: column;
-  margin-left: 70px;
-  margin-top: 70px;
+  margin: 50px auto;
   color: white;
-  height: 100vh;
   padding: 20px;
+  max-width: 1200px;
 }
-.descExp{
-  background-color:rgb(130, 249, 166);
-  padding: 10px;
-}
+
+/* Adjust layout for smaller screens */
 .experience-content {
   display: flex;
   flex-direction: row;
@@ -18,19 +15,18 @@
   align-items: flex-start;
   gap: 20px;
   width: 100%;
-  max-width: 1200px;
 }
 
 .image-section {
-  margin-top: 100px;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
-  gap: 150px;
+  gap: 80px;
   max-width: 40%;
 }
 
 .timeline-image {
-  width: 70%;
+  width: 100%;
   height: auto;
   border-radius: 10px;
 }
@@ -44,32 +40,63 @@
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
-  margin-top: 70px;
+  margin-top: 50px;
 }
 
 .date {
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-left: 30px;
+  margin-right: 30px;
   color: white;
 }
 
-/* .button.workButton {
-  margin-top: 10px;
-  color: white;
-  background-color: #06d6a0;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-}
-
-.button.workButton:hover {
-  background-color: #04c58a;
-} */
-
-.vertical-timeline-element-title, .vertical-timeline-element-subtitle{
+/* Timeline text color */
+.vertical-timeline-element-title,
+.vertical-timeline-element-subtitle {
   color: black;
 }
-#description{
+
+#description {
   color: black;
+}
+
+.descExp {
+  background-color: rgb(130, 249, 166);
+  padding: 10px;
+}
+
+/* === Mobile Responsive Design === */
+@media (max-width: 768px) {
+  .experience-content {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+  }
+
+  .image-section {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .timeline-section {
+    max-width: 100%;
+  }
+
+  .timeline-image {
+    width: 80%; /* Reduce image size for better fit */
+  }
+
+  .exp {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-image {
+    width: 100%; /* Full width for extra small screens */
+  }
+
+  .exp {
+    font-size: 1.3rem;
+  }
 }

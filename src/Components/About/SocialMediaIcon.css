@@ -1,43 +1,84 @@
 .social-media {
   display: flex;
-  margin-left: 50px;
-  margin-bottom: 30px;
-  padding: 0;
-  flex-direction:row; /* Arrange items line by line */
-  gap: 8px; /* Slightly reduce space between each line */
+  align-items: center;
+  justify-content: center; /* Center items horizontally */
+  gap: 40px; /* Space between elements */
+  padding: 20px;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
-.contact{
-  text-align: center;
-  font-family: Poppins,sans-serif;
-  font-weight: 400;
-  font-size: x-large;
-  color: rgb(255, 255, 255);
-  margin-left: 10px;
+.contact {
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #ffffff;
+  white-space: nowrap; /* Prevents text from breaking into multiple lines */
+}
+
+.social-container {
+  display: flex;
+  align-items: center;
+  gap: 30px; /* Space between social items */
 }
 
 .social-item {
   display: flex;
-  margin-left: 100px;
-  align-items: center; /* Align image and text vertically */
-  gap: 10px; /* Space between image and text */
+  align-items: center; /* Align icon and text vertically */
+  gap: 8px;
 }
 
 .social-icon {
   width: 40px;
   height: 40px;
-  border-radius: 50%; /* Optional: Make icons circular */
-  object-fit: cover; /* Ensure proper scaling */
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .social-text {
   text-decoration: none;
-  color: #ffffff; /* Black text color */
+  color: #ffffff;
   font-size: 16px;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .social-text:hover {
-  color: #0073e6; /* Change color on hover */
+  color: #9bf1a6 /* Change color on hover */
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+  .social-media {
+    flex-direction: column; /* Stack elements vertically */
+    text-align: center;
+  }
+
+  .contact {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+
+  .social-container {
+    flex-direction: column; /* Stack social icons vertically */
+    gap: 10px;
+  }
+
+  .social-item {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    font-size: 1.2rem;
+  }
+
+  .social-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .social-text {
+    font-size: 14px;
+  }
 }

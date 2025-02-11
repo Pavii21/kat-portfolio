@@ -1,38 +1,49 @@
-.about {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Push text and image to opposite sides */
-    padding: 20px;
-    margin: 0 auto;
-    margin-top: 40px;
-    max-width: 1200px;
-    height: 80vh; /* Full viewport height */
-    box-sizing: border-box;
-  }
-  
-  .text {
-    max-width: 50%; /* Take up half the container */
-  }
-  
-  .name {
-    font-size: 3rem;
-    font-weight: bold;
-    margin: 0;
-    color: #ffffff; /* Dark color for text */
-  }
-  
-  .job {
-    font-size: 1.5rem;
-    margin: 10px 0 0;
-    color: #c9c8c8; /* Slightly lighter color for the job title */
-  }
+span{
+  color: rgb(101, 255, 114);
+}
 
-  .para{
-    text-align: justify;
-    margin-top: 30px;
-    margin-bottom: 0px;
-  }
-  .image {
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  margin: 0 auto;
+  margin-top: 40px;
+  max-width: 1200px;
+  height: auto;
+  min-height: 80vh;
+  box-sizing: border-box;
+  flex-wrap: wrap; /* Allows wrapping for responsiveness */
+}
+
+/* Text container */
+.text {
+  max-width: 50%;
+  padding: 20px;
+}
+
+.name {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0;
+  color: #ffffff;
+}
+
+.job {
+  font-size: 1.5rem;
+  margin: 10px 0 0;
+  color: #c1ffca;
+}
+
+.para {
+  text-align: justify;
+  margin-top: 20px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Image container */
+.image {
     max-width: 50%; /* Take up the other half of the container */
     display: flex;
     justify-content: center;
@@ -40,10 +51,68 @@
   }
   
   .image img {
-    margin-right: 30px;
-    width: 325px; /* Set fixed width for the circle */
-    height: 325px; /* Set fixed height for the circle */
+    margin-top: 40px;
+    margin-right: 20px;
+    width: 390px; /* Set fixed width for the circle */
+    height: 390px; /* Set fixed height for the circle */
     border-radius: 50%; /* Create a perfect circle */
     object-fit: cover; /* Ensures the image fits well within the circle */
     object-position: center; /* Center the image content */
   }
+
+/* Mobile responsiveness */
+@media (max-width: 1024px) {
+  .about {
+    flex-direction: column; /* Stack items */
+    align-items: center;
+    text-align: center;
+  }
+
+  .text, .image {
+    max-width: 100%; /* Allow full width on smaller screens */
+  }
+
+  .image img {
+    width: 250px; /* Reduce size on smaller screens */
+    height: 250px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .name {
+    font-size: 2.5rem;
+  }
+
+  .job {
+    font-size: 1.3rem;
+  }
+
+  .para {
+    font-size: 0.95rem;
+  }
+
+  .image img {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .name {
+    font-size: 2rem;
+  }
+
+  .job {
+    font-size: 1.1rem;
+  }
+
+  .para {
+    font-size: 0.9rem;
+  }
+
+  .image img {
+    width: 180px;
+    height: 180px;
+  }
+}

@@ -1,51 +1,120 @@
-/* Navbar Styles */
+/* ========== Navbar Styles ========== */
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    background-color: #1d1d1d;
-    color: white;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #1d1d1d;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* ========== Desktop Navbar ========== */
+.navbar {
+  display: flex;
+  gap: 15px;
+}
+
+.navbar button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 8px 12px;
+  transition: 0.3s;
+}
+
+.navbar button:hover {
+  background-color: #61ce70;
+  border-radius: 5px;
+}
+
+/* ========== Mobile Menu Button ========== */
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* ========== Responsive Styles ========== */
+@media (max-width: 1024px) {
+  .menu-icon {
+      display: block;
+      color: white;
   }
-  
-  .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
+
   .navbar {
-    display: flex;
-    gap: 15px;
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: rgba(29, 29, 29, 0.95);
+      width: 100%;
+      text-align: center;
+      padding: 15px 0;
+      transition: all 0.3s ease-in-out;
+      z-index: 999;
   }
-  
+
+  .navbar.active {
+      display: flex;
+  }
+
   .navbar button {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1rem;
-    cursor: pointer;
-    padding: 8px 12px;
-    transition: 0.3s;
+      padding: 12px;
+      font-size: 1.2rem;
+      width: 100%;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
-  
+
   .navbar button:hover {
-    background-color: rgba(104, 252, 104, 0.667);
-    border-radius: 5px;
+      background-color: rgb(143, 255, 124);
   }
-  
-  /* Scroll Sections */
-  .section {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    font-weight: bold;
+}
+
+/* ========== Tablet Styles (768px) ========== */
+@media (max-width: 768px) {
+  .header {
+      padding: 12px 15px;
   }
-  
- 
+
+  .logo {
+      font-size: 1.5rem;
+  }
+
+  .navbar button {
+      font-size: 1.1rem;
+      padding: 10px;
+  }
+}
+
+/* ========== Mobile Styles (480px) ========== */
+@media (max-width: 480px) {
+  .header {
+      padding: 10px 12px;
+  }
+
+  .logo {
+      font-size: 1.3rem;
+  }
+
+  .menu-icon {
+      font-size: 1.8rem;
+  }
+
+  .navbar button {
+      font-size: 1rem;
+      padding: 8px;
+  }
+}

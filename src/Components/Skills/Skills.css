@@ -1,27 +1,37 @@
-.skills{
-    margin-top: 800px;
+.skills {
     text-align: center;
 }
-.ae{
-    height: auto;
-    width: 75px;
-    margin-right: 20px;
-    margin-top: 50px;
-}
-.pr{
+
+/* Default sizes for larger screens */
+.ae, .pr, .ps, .da {
     height: auto;
     width: 80px;
-    margin-right: 20px;
-
-
-}
-.ps{
-    height: auto;
-    width: 80px;
+    margin: 20px;
 }
 
-.da{
-    height: auto;
-    width: 80px;
-    margin-left: 15px;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .skills {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px; /* Adds spacing between elements */
+    }
+
+    .ae, .pr, .ps, .da {
+        width: 60px; /* Reduce icon size on smaller screens */
+        margin: 10px; /* Reduce margins for compact layout */
+    }
+}
+
+@media (max-width: 480px) {
+    .skills {
+        flex-direction: column; /* Stack items vertically for extra small screens */
+        align-items: center;
+    }
+
+    .ae, .pr, .ps, .da {
+        width: 50px; /* Further reduce size for very small screens */
+        margin: 5px; /* Minimal spacing */
+    }
 }
