@@ -19,15 +19,15 @@ const timelineElements = [
       description: "Worked as an assistant editor for the pilot film Malargal Kaetten, contributing to its post-production process.",
       date: "October 2023 - January 2024",
       icon: "work",
-      buttonText: "Portfolio",
     },
     {
       id: 4,
-      title: "Content Creater",
+      title: "Content Creator",
       description: "I have my own youtube channel for more than 3 years and I've been an editor for my channel from the beginning . I'm doing commentary and reaction type of contents there .",
       date: "January 2020 - Present",
       icon: "work",
-      buttonText: "Portfolio",
+      buttonText: "YouTube Link",
+      link: "https://www.youtube.com/@katyt_",
     },
   ];
   

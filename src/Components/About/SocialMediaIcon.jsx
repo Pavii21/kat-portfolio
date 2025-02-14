@@ -18,7 +18,7 @@ const SocialMediaIcon = () => {
     },
     {
       platform: 'KATHIR(KAT)',
-      url: 'https://www.linkedin.com/in/kathir-k-8a285423b',
+      url: 'https://www.linkedin.com/in/kathir-p-8a285423b/',
       icon: LinkedinIcon,
     },
   ];
